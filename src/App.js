@@ -1,22 +1,40 @@
+// import { useEffect, useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import LoginForm from './components/LoginForm';
-import Signup from './components/Signup';
-import{
-  BrowserRouter as Router,
-  Route,
-  Routes
-} from "react-router-dom";
+ import Login from './components/Login';
+import Registration from './components/Registration';
 function App() {
+  // const addData = (user) => {
+  //   user.id = data.length + 1
+  //   setData([...data, user])
+  // }
+  // const [data, setData] = useState([])
+  // useEffect(() => {
+  //   fetchData()
+  // })
+  // const fetchData = () => {
+  //   fetch("")
+  //     .then(response => {
+  //       return response.json
+  //     })
+  //     .then(info => {
+  //       setData(info)
+  //     })
+  // }
+  
+  // ToDo: Add Routing for Login and Registration
+
   return (
     <>
-    <Router>
-    <Routes>
-   <Route path="signup" element= {Signup}/>
-   <Route path="/" element= {LoginForm}/>
+     <BrowserRouter>
+     <Routes>
+      <Route path = "/" element = {<Login/>}/>
+      <Route path = "Registration" element = {<Registration/>}/>
 
-    </Routes>
-    </Router>
-      
+     </Routes>
+     </BrowserRouter>
+     
+
     </>
 
   );
